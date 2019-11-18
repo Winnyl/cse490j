@@ -19,9 +19,9 @@ public class SelectableTyrantPlayer : Selectable
         // Set the animator pose value here:
         // Set the object's mesh renderer to the selected material
         // Play the Tyrant's sound clip
-        poseNum = this.poseNum;
-        gameObject.GetComponent<MeshRenderer>().material = this.gameObject.GetComponent<MeshRenderer>().material;
-        sound.Play();
+        //poseNum = this.poseNum;
+        gameObject.GetComponent<MeshRenderer>().material = selected;//this.gameObject.GetComponent<MeshRenderer>().material;
+        //sound.Play();
 
 
 
@@ -39,12 +39,13 @@ public class SelectableTyrantPlayer : Selectable
 
     public override void OnDeselect()
     {
-        isSelected = false;
+        Debug.Log("Deselected");
         // TODO:
         // Set the animator's pose value to 0
         // Set the object's mesh renderer to the def material
-        poseNum = 0;
+        //poseNum = 0;
         gameObject.GetComponent<MeshRenderer>().material = def;
+        isSelected = false;
 
 
     }

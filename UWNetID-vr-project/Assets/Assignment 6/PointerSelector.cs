@@ -30,6 +30,7 @@ public class PointerSelector : MonoBehaviour
     {
         RaycastHit hit;
         bool mouseDown = Input.GetMouseButtonDown(0);
+        //Debug.DrawRay(Camera.main.ScreenPointToRay(Input.mousePosition).origin, Camera.main.ScreenPointToRay(Input.mousePosition).direction * 10, Color.red, 0.1f);
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, castDistance, castMask))
         {
@@ -58,8 +59,9 @@ public class PointerSelector : MonoBehaviour
                         hover = temp;
 
                     // Hover on 
-                    if (temp != hover && hover != selected && hover != null)
+                    if (hover != null && temp != hover && hover != selected)
                         hover.GetComponent<Selectable>().OnDeselect();
+
                     hover = temp.GetComponent<Selectable>().OnHover();
                 }
             }

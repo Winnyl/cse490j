@@ -231,7 +231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7180198081057468477}
-  - component: {fileID: -2194444522946362100}
   m_Layer: 0
   m_Name: Tyrant Controller
   m_TagString: Untagged
@@ -255,18 +254,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2194444522946362100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7180198081057468474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b69ba6e14f44614cb82cdcbe3aa6e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
-  hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
-  selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
