@@ -19,7 +19,10 @@ public class SelectableTyrantPlayer : Selectable
         // Set the animator pose value here:
         // Set the object's mesh renderer to the selected material
         // Play the Tyrant's sound clip
-        
+        poseNum = this.poseNum;
+        gameObject.GetComponent<MeshRenderer>().material = this.gameObject.GetComponent<MeshRenderer>().material;
+        sound.Play();
+
 
 
         return this.gameObject;
@@ -27,11 +30,10 @@ public class SelectableTyrantPlayer : Selectable
 
     public override GameObject OnHover()
     {
-        // TODO:
-        // Copy the code from Selectable Tile OnHover Here
-        
-
-
+        if (gameObject.GetComponent<MeshRenderer>().material != hover && !isSelected)
+        {
+            gameObject.GetComponent<MeshRenderer>().material = hover;
+        }
         return this.gameObject;
     }
 
@@ -41,7 +43,8 @@ public class SelectableTyrantPlayer : Selectable
         // TODO:
         // Set the animator's pose value to 0
         // Set the object's mesh renderer to the def material
-        
+        poseNum = 0;
+        gameObject.GetComponent<MeshRenderer>().material = def;
 
 
     }
