@@ -21,7 +21,9 @@ public class SelectableTyrantPlayer : Selectable
         // Play the Tyrant's sound clip
         //poseNum = this.poseNum;
         gameObject.GetComponent<MeshRenderer>().material = selected;//this.gameObject.GetComponent<MeshRenderer>().material;
-        //sound.Play();
+        sound.Play(0);
+        anim.SetInteger("pose", poseNum);
+  
 
 
 
@@ -46,7 +48,9 @@ public class SelectableTyrantPlayer : Selectable
         //poseNum = 0;
         gameObject.GetComponent<MeshRenderer>().material = def;
         isSelected = false;
-
+        anim.SetInteger("pose", 0);
+       
+  
 
     }
 }
